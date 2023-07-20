@@ -20,7 +20,7 @@ class AuthController extends Controller
 
         if (!Auth::attempt($credenciales)){
             //generar token
-            return response()->json(["message" => "no autenticado"]);
+            return response()->json(["message" => "no autenticado"], 401);
         }
 
         $usuario = Auth::user();
