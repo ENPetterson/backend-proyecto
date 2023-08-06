@@ -1,0 +1,40 @@
+GET http://127.0.0.1:8000/api/producto
+
+
+### guardar producto
+
+POST http://127.0.0.1:8000/api/producto
+Content-Type: application/json
+Accept: application/json
+
+{
+    "nombre": "MOUSE",
+    "precio": 100.90,
+    "cantidad": 8,
+    "categoria_id": 3,
+    "descripcion": "lala"
+}
+
+
+### mostrar producto
+GET http://127.0.0.1:8000/api/producto/2
+Accept: application/json
+
+
+### modificar
+
+PUT http://127.0.0.1:8000/api/producto/6
+Accept: application/json
+Content-Type: application/json
+
+{
+  "nombre": "TIJERA MODIFICADA",
+  "precio": "165.00",
+  "cantidad": 4,
+  "descripcion": "q",
+  "estado": true,
+  "categoria_id": 1
+}
+
+### eliminar
+DELETE http://127.0.0.1:8000/api/producto/1
