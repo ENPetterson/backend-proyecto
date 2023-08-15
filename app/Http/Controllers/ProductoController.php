@@ -109,7 +109,7 @@ class ProductoController extends Controller
         if($file = $request->file("imagen")) {
             $direccion_imagen = time()."-".$file->getClientOriginalName();
             $file->move("imagen/", $direccion_imagen);
-            $direccion_imagen = "imagen/".$direccion_imagen;
+            $direccion_imagen = "imagen/". $direccion_imagen;
 
             $prod = Producto::find($id);
             $prod->imagen = $direccion_imagen;
